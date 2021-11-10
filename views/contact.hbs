@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>My first view</title>
+  <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+  <h1>Pagina de contacto</h1>
+  <h2>Mi nombre es {{name}}</h2>
+  <h2>Mi apellido es {{lastName}}, y tengo {{age}} años</h2>
+  {{#if admin}}
+    <p>ERES ADMIN!!!! 🔥🔥🔥🔥🔥</p>
+  {{/if}}
+
+  <ul>
+    {{#each numbers}}
+    <li>{{this}}</li>
+    {{/each}}
+  </ul>
+{{!-- El #each es un loop que va a iterar sobre todos los items dentro de la propiedad de "numbers" que existe dentro de nuestro objeto iteral "user". El "this" hace referencia a cada item. Por lo tanto, como lo tenemos, hbs va a crear un elemento de lista nuevo con nada número que tenemos dentro del array de "numbers" --}}
+{{!-- En hbs en general, para indicar que estamos abriendo un if statement, each, etc. Se indica con un "#" dónde empieza el bloque y con un "/" dónde termina --}}
+</body>
+</html>
